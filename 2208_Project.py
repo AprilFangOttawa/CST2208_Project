@@ -143,7 +143,7 @@ Class A binary target: 1 indicates the subject has been diagnosed with one of th
 - https://www.data-cowboys.com/blog/which-machine-learning-classifiers-are-best-for-small-datasets
 - https://catboost.ai/en/docs/concepts/parameter-tuning#learning-rate
 
-[link text](https://)# **ICR - Identifying Age-Related Conditions**
+**ICR - Identifying Age-Related Conditions**
 
 
 Use Machine Learning to detect conditions with measurements of anonymous characteristics
@@ -1161,7 +1161,7 @@ if test_log_loss is not None:
 
 # **Submission to Kaggle competition**
 
-[link text](https://)## cleaning and feature engineering
+## cleaning and feature engineering
 """
 
 testcopy=test.copy()
