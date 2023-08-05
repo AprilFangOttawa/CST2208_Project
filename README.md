@@ -2,37 +2,37 @@
 ICR - Identifying Age-Related Conditions, use Machine Learning to detect conditions with measurements of anonymous characteristics 
 Project Summary 
 
-Background 
+**Background** 
 
 The project considers the multitude of health issues associated with aging, ranging from heart disease and dementia to hearing loss and arthritis. Aging is a significant risk factor for numerous diseases and complications, and bioinformatics research focuses on interventions that can slow down and reverse biological aging, as well as prevent age-related ailments. Data science plays a crucial role in developing new methods to address these complex problems, even when the available sample size is small. 
 
-Problem Statement 
+**Problem Statement**
 
 In the context of predicting medical conditions, the current use of models like XGBoost and Random Forest may yield unsatisfactory performance, particularly in critical situations where accurate and timely predictions are essential to safeguard lives. Existing methods require improvement to ensure reliable and consistent predictions across diverse cases, especially when dealing with life-critical scenarios. 
 
 This project presents an opportunity to advance the field of bioinformatics by addressing the limitations of current predictive models and exploring innovative approaches to solving critical medical problems. By developing more efficient and accurate prediction methods, the project aims to pave the way for enhanced healthcare interventions and interventions that can potentially mitigate the impact of age-related ailments. The successful implementation of this project has the potential to revolutionize medical decision-making and improve patient outcomes, making it a significant and promising endeavor in the field of predictive analytics and bioinformatics. 
 
-Objective 
+**Objective** 
 
-The primary objective of this project is to develop an efficient and reliable machine learning model for identifying age-related conditions based on anonymous health characteristics. The specific goals of this project are as follows: 
+1. The primary objective of this project is to develop an efficient and reliable machine learning model for identifying age-related conditions based on anonymous health characteristics. The specific goals of this project are as follows: 
 
-Predictive Model Development: Build and train a predictive model capable of accurately classifying individuals into two classes: those with age-related medical conditions (Class 1) and those without any age-related conditions (Class 0). 
+2. Predictive Model Development: Build and train a predictive model capable of accurately classifying individuals into two classes: those with age-related medical conditions (Class 1) and those without any age-related conditions (Class 0). 
 
-Improved Medical Condition Detection: Improve upon existing methods, such as XGBoost and Random Forest, to enhance the accuracy and robustness of predictions. The aim is to create a model that outperforms these traditional algorithms, especially in critical medical scenarios where timely and accurate detection is essential. 
+3. Improved Medical Condition Detection: Improve upon existing methods, such as XGBoost and Random Forest, to enhance the accuracy and robustness of predictions. The aim is to create a model that outperforms these traditional algorithms, especially in critical medical scenarios where timely and accurate detection is essential. 
 
-Privacy Preservation: Ensure the privacy of patients by utilizing anonymized health characteristics in the model. The use of key characteristics will enable the encoding of relevant patient details while protecting sensitive information, thus complying with data privacy regulations. 
+4. Privacy Preservation: Ensure the privacy of patients by utilizing anonymized health characteristics in the model. The use of key characteristics will enable the encoding of relevant patient details while protecting sensitive information, thus complying with data privacy regulations. 
 
-Advancement in Bioinformatics: Contribute to the field of bioinformatics by introducing innovative approaches for addressing age-related ailments. The project seeks to leverage data science and machine learning techniques to identify potential interventions that can slow down or reverse the effects of biological aging. 
+5. Advancement in Bioinformatics: Contribute to the field of bioinformatics by introducing innovative approaches for addressing age-related ailments. The project seeks to leverage data science and machine learning techniques to identify potential interventions that can slow down or reverse the effects of biological aging. 
 
-Sample Size Considerations: Address the challenges posed by limited sample sizes in bioinformatics research. Develop methods and techniques that can yield reliable predictions even when working with a relatively small training dataset. 
+6. Sample Size Considerations: Address the challenges posed by limited sample sizes in bioinformatics research. Develop methods and techniques that can yield reliable predictions even when working with a relatively small training dataset. 
 
  
 
-Methodology 
+**Methodology** 
 
 The methodology encompasses data preprocessing, model building, and evaluation stages: 
 
-Exploratory Data Analysis (EDA):  
+1. Exploratory Data Analysis (EDA):  
 
 Load the dataset into Pandas DataFrames. 
 
@@ -46,7 +46,7 @@ Investigate the supplemental metadata (greeks.csv) to identify any patterns or c
 
  
 
-Data Preprocessing: 
+2. Data Preprocessing: 
 
 Dataset Split with Stratified Sampling 
 
@@ -58,7 +58,7 @@ Imputation
 
  
 
-Model Building and Training: 
+3. Model Building and Training: 
 
 Split the pre-processed data into training and testing sets. 
 
@@ -86,7 +86,7 @@ Train each model using the training data and tune hyperparameters to optimize pe
 
  
 
-Model Evaluation: 
+4. Model Evaluation: 
 
 As a requirement of the Kaggle Competition, a function for Balanced Logg Loss were used to evaluate the performance of each model. 
 
@@ -96,7 +96,7 @@ Compare the performance of different models to identify the most effective one f
 
  
 
-Model enhancement (Tuning and Ensembles): 
+5. Model enhancement (Tuning and Ensembles): 
 
 Hyperparameter Tuning Strategy: Before model training, we will conduct hyperparameter tuning for each base model to optimize their performance. Cross-validation techniques will be employed to find the best hyperparameters for each model. The tuning process will be based on relevant evaluation metrics such as accuracy, precision, recall, F1-score, and ROC-AUC. 
 
@@ -106,9 +106,9 @@ Ensemble Method: To address any remaining overfitting concerns and improve the o
 
  
 
-Model Deployment: 
+6. Model Deployment: 
 
-Cleaning and Feature Engineering for Test Data: 
+1) Cleaning and Feature Engineering for Test Data: 
 
 Before deploying the final model, the test data must undergo the same data cleaning and feature engineering steps as performed during the training phase. 
 
@@ -118,7 +118,7 @@ Categorical variables are encoded using the same encodings as one-hot encoding a
 
 Feature scaling is performed on numerical features to ensure consistency with the training data. 
 
-Loading the Trained Model: 
+2) Loading the Trained Model: 
 
 The trained ensemble model "stacking_clf" is loaded into the deployment environment from a serialized file saved during model development. 
 
@@ -128,7 +128,7 @@ The cleaned and preprocessed test data is fed into the "stacking_clf" model for 
 
 The model generates predictions for the target variable based on the input features. 
 
-Handling Predictions: 
+3) Handling Predictions: 
 
 The predictions generated by the model can be further post-processed or transformed as required, depending on the specific use case or business needs. 
 
@@ -136,7 +136,7 @@ For binary classification, the model typically outputs probabilities for class 0
 
 A threshold can be applied to convert probabilities to binary predictions if necessary. 
 
-Result Output: 
+4) Result Output: 
 
 The final predictions can be stored in a suitable format for further analysis or used for decision-making in the production environment. 
 
@@ -144,7 +144,7 @@ If required, the results can be integrated with other systems, applications, or 
 
  
 
-Data Evaluation Summary 
+**Data Evaluation Summary**
 
 The dataset provided for this project comprises two main components: the training dataset and the greeks dataset. 
 
@@ -158,7 +158,7 @@ For a more comprehensive understanding of the datasets and to explore the detail
 
  
 
-Data Dictionary 
+**Data Dictionary**
 
 train.csv- The training set. Id Unique identifier for each observation. AB-GL 56 anonymized health characteristics. All are numeric except for EJ, which is categorical. Class A binary target: 1 indicates the subject has been diagnosed with one of the three conditions, 0 indicates they have not. 
 
@@ -178,7 +178,7 @@ Epsilon The date the data for this subject was collected. Note that all of the d
 
  
 
-Libraries 
+**Libraries** 
 
 Pandas: For data manipulation and analysis. 
 
@@ -194,18 +194,18 @@ XGBoost: For implementing the XGBoost model.
 
  
 
-Step to Follow 
+**Step to Follow**
 
-EDA and Cleaning: we understand the data as much as we can and do some initial data preparation. 
+1. EDA and Cleaning: we understand the data as much as we can and do some initial data preparation. 
 
-Data preprocessing including dataset split, oversampling, features reduction, transformation, scaling. 
+2. Data preprocessing including dataset split, oversampling, features reduction, transformation, scaling. 
 
-Modelling including simple and advanced model with default parameters. 
+3. Modelling including simple and advanced model with default parameters. 
 
-Tunning the parameters of selected models. 
+4. Tunning the parameters of selected models. 
 
-Evaluation metrics with best parameters of best models. 
+5. Evaluation metrics with best parameters of best models. 
 
-Ensemble models to get the best results. 
+6. Ensemble models to get the best results. 
 
-Prediction for submission in Kaggle competition. 
+7. Prediction for submission in Kaggle competition. 
